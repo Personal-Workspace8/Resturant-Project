@@ -1,0 +1,96 @@
+<nav class="bg-white shadow fixed top-0 w-full font-serif opacity-90 py-2 z-10">
+    <div class="container mx-auto">
+        <div class="flex h-16 justify-between">
+            <div class="flex items-center gap-3">
+                <a routerLink="/" class="flex flex-shrink-0 items-center">
+                    <h1 class="text-primaryColor text-2xl lg:text-4xl"> SUPREME TIME</h1>
+                </a>
+                <a class="text-xl font-serif font-semibold cursor-pointer md:hidden"
+                    (click)="redirectToWhatsApp()">01416111766</a>
+            </div>
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8 md:space-x-4 text-sm lg:text-lg">
+                <a routerLink="/home" routerLinkActive="active"
+                    class="inline-flex items-center px-1 pt-1  text-gray-900">Home</a>
+                <a routerLink="/timing" routerLinkActive="active"
+                    class="inline-flex items-center  px-1 pt-1   text-gray-800 hover:text-black focus:text-black font-sans">Opening
+                    Hours</a>
+                <a routerLink="/about" routerLinkActive="active"
+                    class="inline-flex items-center  px-1 pt-1  text-gray-800 hover:text-black focus:text-black">About
+                    Us</a>
+                <a routerLink="/pricing" routerLinkActive="active"
+                    class="inline-flex items-center  px-1 pt-1  text-gray-800 hover:text-black focus:text-black">Pricing</a>
+                <a routerLink="/contact" routerLinkActive="active"
+                    class="inline-flex items-center  px-1 pt-1  text-gray-800 hover:text-black focus:text-black">Contact
+                    Us</a>
+
+            </div>
+            <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                <!-- <h1 class="text-3xl font-serif font-semibold">01416111766</h1> -->
+                <a class="text-3xl font-serif font-semibold cursor-pointer"
+                    (click)="redirectToWhatsApp()">01416111766</a>
+            </div>
+            <div class="-mr-2 flex items-center sm:hidden">
+                <!-- Mobile menu button -->
+                <button type="button" (click)="toggleNavigation()"
+                    class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- slide-navigation.component.html -->
+                <div [ngClass]="{'translate-x-0': isOpen, '-translate-x-full': !isOpen}"
+                    class="fixed top-0 left-0 z-50 bg-gray-800 text-white w-[70%] h-full overflow-y-auto ease-in-out transition-all duration-300 transform shadow-lg">
+                    <div class="container mx-auto relative">
+                        <div class="bg-white p-1  absolute top-2 right-2 active:bg-gray-500 rounded-full">
+                            <button class="text-black flex items-center justify-center "
+                                (click)="closeSlideNavigation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-4 h-4">
+                                    <path fill-rule="evenodd"
+                                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </button>
+                        </div>
+
+                        <ul class="pt-5 pb-4 flex flex-col gap-2 ">
+                            <li><a routerLink="/home" routerLinkActive="bg-gray-600"
+                                    class="block py-2 px-2 hover:bg-gray-600 rounded-md"
+                                    (click)="closeSlideNavigation()">Home</a>
+                            </li>
+                            <li><a routerLink="/timing" routerLinkActive="bg-gray-600"
+                                    class="block py-2 px-2 hover:bg-gray-600 rounded-md"
+                                    (click)="closeSlideNavigation()">Opening
+                                    Hours</a></li>
+                            <li><a routerLink="/about" routerLinkActive="bg-gray-600"
+                                    class="block py-2 px-2 hover:bg-gray-600 rounded-md"
+                                    (click)="closeSlideNavigation()">About
+                                    Us</a></li>
+                            <li><a routerLink="/pricing" routerLinkActive="bg-gray-600"
+                                    class="block py-2 px-2 hover:bg-gray-600 rounded-md"
+                                    (click)="closeSlideNavigation()">Pricing</a></li>
+                            <li><a routerLink="/contact" routerLinkActive="bg-gray-600"
+                                    class="block py-2 px-2 hover:bg-gray-600 rounded-md"
+                                    (click)="closeSlideNavigation()">Contact
+                                    Us</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,30 @@
+.hero-section {
+    height: 80vh;
+    background-image: url('https://img1.wsimg.com/isteam/ip/dcaf0790-2e31-40ed-a635-4e61984ff6cd/_DSC9620.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    color: white !important;
+
+    &:hover {
+        color: red !important;
+    }
+
+}
+
+.hero-section-2 {
+    height: 110vh;
+    background-image: url('https://img1.wsimg.com/isteam/ip/dcaf0790-2e31-40ed-a635-4e61984ff6cd/_DSC9567.jpg/:/rs=w:1280');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
